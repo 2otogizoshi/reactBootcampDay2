@@ -10,6 +10,15 @@ class App extends React.Component {
       friends: ["Jordyn", "Mikenzi", "Jake"]
     };
   }
+  handleAddFriend() {}
+  handleRemoveFriend(name) {
+    this.setState(currentState => {
+      return {
+        friends: currentState.friends.filter(friend => friend !== name)
+      };
+    });
+  }
+
   render() {
     return (
       <div>
